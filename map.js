@@ -44,13 +44,29 @@ numbers=[2,10,50,30];
 const result=numbers.map((num,index)=>{ 
     // const total=num*index
     // console.log(total)
-    console.log(num*index)
+    // console.log(num*index)
 })
-console.log(result)
+// console.log(result)
 
 
-numbers2=[2,10,50,30];
+const numbers2=[2,10,50,30];
 const result2=numbers2.map((num,index)=>{ 
     return num*index;
 })
-console.log(result2)
+// console.log(result2)
+
+
+// map is an array method therefor it doesn't work object directly...but some system can be applied-->
+
+let player={
+    name:'sakib al hasan',
+    age:37,
+    type:'all-rounder'
+};
+
+let entries=Object.entries(player).map(x=>x.toString().toUpperCase());
+
+console.log(entries)
+
+
+
