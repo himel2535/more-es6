@@ -30,3 +30,31 @@ const student = {
 }
 // student.getScore();
 student.getScoreArrow();
+
+
+
+// for encapsulation-->
+
+class Vehicle2 {
+    #tin
+  constructor(type, price) {
+    this.type = type;
+    this.price = price;
+    this.#tin='12345'
+  }
+  getThis() {
+    console.log(this);
+  }
+  getPrice() {
+    return this.price;
+  }
+  getTin(){
+    console.log(this.#tin)
+  }
+}
+const bike = new Vehicle("bike",1000);
+// bike.getThis();
+console.log(bike.getPrice())
+
+// this is private thats why doesn't work on external but in internal of class it will work with relax-->
+console.log(bike.#tin)
